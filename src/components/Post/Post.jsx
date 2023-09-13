@@ -1,3 +1,4 @@
+import { Avatar } from "../Avatar/Avatar";
 import { Comment } from "../Comment/Comment";
 import styles from "./Post.module.css";
 
@@ -6,10 +7,9 @@ export function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/diogosaints.png"
-          ></img>
+          <Avatar hasBorder  className={styles.avatar}
+            src="https://github.com/diogosaints.png"/>
+            
           <div className={styles.authorInfo}>
             <strong>Diogo Santos</strong>
             <span>Web Developer</span>
