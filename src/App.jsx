@@ -5,17 +5,56 @@ import { Post } from "./components/Post/Post";
 import "./global.css";
 import styles from './App.module.css'
 
+
+// eslint-disable-next-line no-unused-vars
+const posts = [
+  { id: 1,
+  author:{
+    avatarUrl: 'https://githib.com/diogosaints.com',
+    name: 'Diogo Santos',
+    role: 'Web Developer'
+  },
+  content:[     
+    {type:'paragraph', content: 'Lorem ipsum dolor 👋' },
+    {type:'paragraph', content: 'sit amet consectetur adipisicing elit. Veniam, eligendi reprehende'},
+    {type:'Link', content:'👉adasdad@.com.br'},
+  ],
+  publishedAt: new Date('2023-09-17')
+  },
+  { id: 2,
+    author:{
+      avatarUrl: 'https://githib.com/diogosaints.com',
+      name: 'Diogo Santos',
+      role: 'Web Developer'
+    },
+    content:[     
+      {type:'paragraph', content: 'Lorem ipsum dolor 👋' },
+      {type:'paragraph', content: 'sit amet consectetur adipisicing elit. Veniam, eligendi reprehende'},
+      {type:'Link', content:'👉adasdad@.com.br'},
+    ],
+    publishedAt: new Date('2023-09-17')
+    },
+];
+
+
+
+
 export function App() {
   return (
     <div>
-      <Header />
+                <Header />
 
       <div className={styles.wrapper}>
         <Sidebar/>
         <main>
-          <Post/>
-          <Post/>
-          <Post/>
+         {posts.map(post =>{
+          return (
+          <Post 
+            author={post.author}
+            content={post.content}  
+            publishedAt={post.publishedAt}
+          />)
+         })}
 
         </main>
       </div>
