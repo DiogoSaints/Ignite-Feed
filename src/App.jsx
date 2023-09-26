@@ -10,7 +10,7 @@ import styles from './App.module.css'
 const posts = [
   { id: 1,
   author:{
-    avatarUrl: 'https://githib.com/diogosaints.com',
+    avatarUrl: '	https://github.com/diogosaints.png',
     name: 'Diogo Santos',
     role: 'Web Developer'
   },
@@ -23,8 +23,8 @@ const posts = [
   },
   { id: 2,
     author:{
-      avatarUrl: 'https://githib.com/diogosaints.com',
-      name: 'Diogo Santos',
+      avatarUrl: '	https://github.com/diogosaints.png',
+      name: 'Santos Diogo',
       role: 'Web Developer'
     },
     content:[     
@@ -49,7 +49,7 @@ export function App() {
         <main>
          {posts.map(post =>{
           return (
-          <Post 
+            <Post 
             author={post.author}
             content={post.content}  
             publishedAt={post.publishedAt}
